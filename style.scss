@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    widows: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    font-size: 1.5rem;
+}
+
+.booking{
+    background-color: #c0c0c0;
+    height: auto;
+    max-width: 780px;
+
+    display: flex;
+    justify-content: center;
+    
+
+    &__seat{
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 2rem;
+        
+    }
+}
