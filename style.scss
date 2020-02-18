@@ -61,18 +61,21 @@ li{
         }
       }   
 
+      &--screen{
+          height: 100px;
+          width: 300px;
+  
+          background-color: #2aa3e99d;
+          margin-bottom: 2rem;
+      }
     &__row{
+        width: 100%;
        display: flex;
-       justify-content: center;
+       justify-content: space-around;
+       margin-top: 1rem;
     }
+    
 
-    &--screen{
-        height: 100px;
-        width: 300px;
-
-        background-color: #2aa3e99d;
-        margin-bottom: 2rem;
-    }
 }
 .seat{
     // border: 5px solid #999;
