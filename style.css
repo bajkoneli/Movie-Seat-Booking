@@ -98,6 +98,69 @@ li {
   margin-top: 1rem;
 }
 
+.booking__total {
+  height: 150px;
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0.513);
+  color: #fff;
+  font-size: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 2rem;
+  padding: .5rem;
+}
+
+.name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.buy {
+  background-color: red;
+  color: #d4d0d0;
+  outline: none;
+  border: none;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: .5rem;
+}
+
+.border {
+  width: 368px;
+  border: 1px solid red;
+}
+
 .seat {
   height: .8rem;
   width: 1.2rem;
