@@ -27,3 +27,45 @@ ul{
 li{
     margin:0 1rem;
 }
+
+.container{
+    max-width: 980px;
+    margin: 0 auto;
+
+}
+.booking{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    // margin-top: 20rem;
+
+    & label{
+        margin-bottom: 1rem;
+    }
+
+    &__showcase{
+        width: 480px;
+        display: flex;
+        justify-content: center;
+
+        & div{
+            text-align: center;
+        }
+      }   
+
+    &__row{
+        height: 100%;
+        widows: 100%;
+
+        display: flex;
+        justify-content: space-around;
+        
+    }
+}
+.seat{
+    border: 5px solid #999;
+    border-radius: 5px 5px 0 0;
+    height: .5rem;
+    width: 1rem;
+}
