@@ -67,24 +67,49 @@ li {
           justify-content: center;
 }
 
-.booking__showcase div {
-  text-align: center;
-}
-
-.booking__row {
-  height: 100%;
-  widows: 100%;
+.booking__showcase li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.booking__showcase li div {
+  margin: 1rem auto;
+}
+
+.booking__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.booking--screen {
+  height: 100px;
+  width: 300px;
+  background-color: #2aa3e99d;
+  margin-bottom: 2rem;
 }
 
 .seat {
-  border: 5px solid #999;
+  height: .8rem;
+  width: 1.2rem;
+  background-color: #999;
   border-radius: 5px 5px 0 0;
-  height: .5rem;
-  width: 1rem;
+  margin: 4px;
+}
+
+.occupied {
+  background-color: greenyellow;
+}
+
+.selected {
+  background-color: #1f83e0;
 }
 /*# sourceMappingURL=style.css.map */

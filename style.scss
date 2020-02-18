@@ -49,23 +49,45 @@ li{
         display: flex;
         justify-content: center;
 
-        & div{
-            text-align: center;
+        & li{
+            display: flex;
+            flex-direction: column;            
+
+        }
+
+        & li div{
+           margin: 1rem auto;
+
         }
       }   
 
     &__row{
-        height: 100%;
-        widows: 100%;
+       display: flex;
+       justify-content: center;
+    }
 
-        display: flex;
-        justify-content: space-around;
-        
+    &--screen{
+        height: 100px;
+        width: 300px;
+
+        background-color: #2aa3e99d;
+        margin-bottom: 2rem;
     }
 }
 .seat{
-    border: 5px solid #999;
+    // border: 5px solid #999;
+    height: .8rem;
+    width: 1.2rem;
+
+    background-color: #999;
     border-radius: 5px 5px 0 0;
-    height: .5rem;
-    width: 1rem;
+
+    margin: 4px;
+}
+
+.occupied{
+    background-color: greenyellow;
+}
+.selected{
+    background-color:  #1f83e0;
 }
