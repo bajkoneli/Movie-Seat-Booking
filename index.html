@@ -7,7 +7,7 @@
   <title>Movie Seat Booking</title>
 </head>
 <body>
-  <div class="booking container">
+  <div class="movie-container">
     <label>Pick a movie:</label>
     <select id="movie">
       <option value="10">
@@ -19,7 +19,7 @@
     </select>
   </div> 
   
-  <ul class="booking__showcase">
+  <ul class="showcase">
     <li>
       <div class="seat"></div>
       <small>N/A</small>
@@ -35,8 +35,8 @@
   </ul>
 
   <div class="container">
-    <div class="booking--screen"></div>
-    <div class="booking__row">
+    <div class="screen"></div>
+    <div class="row">
       <div class="seat"></div>
       <div class="seat"></div>
       <div class="seat"></div>
@@ -47,7 +47,7 @@
       <div class="seat"></div>
       <div class="seat"></div>
     </div>
-    <div class="booking__row">
+    <div class="row">
       <div class="seat"></div>
       <div class="seat"></div>
       <div class="seat"></div>
@@ -58,7 +58,7 @@
       <div class="seat"></div>
       <div class="seat"></div>
     </div>
-    <div class="booking__row">
+    <div class="row">
       <div class="seat"></div>
       <div class="seat"></div>
       <div class="seat"></div>
@@ -69,7 +69,7 @@
       <div class="seat"></div>
       <div class="seat selected"></div>
     </div>
-    <div class="booking__row">
+    <div class="row">
       <div class="seat"></div>
       <div class="seat"></div>
       <div class="seat"></div>
@@ -80,7 +80,7 @@
       <div class="seat occupied"></div>
       <div class="seat"></div>
     </div>
-    <div class="booking__row">
+    <div class="row">
       <div class="seat"></div>
       <div class="seat occupied"></div>
       <div class="seat occupied"></div>
@@ -91,7 +91,7 @@
       <div class="seat"></div>
       <div class="seat"></div>
     </div>
-    <div class="booking__row">
+    <div class="row">
       <div class="seat"></div>
       <div class="seat"></div>
       <div class="seat"></div>
@@ -103,13 +103,8 @@
       <div class="seat"></div>
     </div>
   </div>
-  <div class="booking__total">
-    <div class="name">Movie: <span id="name">Avengers</span></div>
-    <div class="number">Number of Seat: <span id="number">3</span></div>
-    <div class="border"></div>
-    <div class="price">Price: <span id="price">30$</span></div>
-    <button type="submit" class="buy" id="buy">Buy</button>
-  </div>
+  <p class="text">Selected number of seat is <span id="count">0</span> total price is $ <span id="total">0</span></p>
+
 
   <script src="app.js"></script>
 </body>

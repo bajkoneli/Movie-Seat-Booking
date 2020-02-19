@@ -7,7 +7,7 @@
 
 body {
   height: 100vh;
-  widows: 100vw;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -21,7 +21,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 1.5rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: #242333;
+  color: #fff;
 }
 
 ul {
@@ -38,27 +40,91 @@ li {
 }
 
 .container {
-  max-width: 980px;
-  margin: 0 auto;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  margin-bottom: 30px;
 }
 
-.booking {
+.movie-container select {
+  background-color: #fff;
+  border: 0;
+  border-radius: 10px;
+  font-size: 14px;
+  margin-left: 10px;
+  padding: 5px 15px 5px 15px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.seat {
+  height: 12px;
+  width: 15px;
+  background-color: #444451;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin: 3px;
+}
+
+.seat.selected {
+  background-color: #6feaf6;
+}
+
+.seat.occupied {
+  background-color: #fff;
+}
+
+.seat:nth-of-type(2) {
+  margin-right: 18px;
+}
+
+.seat:nth-last-of-type(2) {
+  margin-left: 18px;
+}
+
+.seat:not(.occupied):hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.showcase .seat:not(.occupied):hover {
+  cursor: default;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.showcase {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: #777;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.booking label {
-  margin-bottom: 1rem;
+.showcase li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 10px;
 }
 
-.booking__showcase {
-  width: 480px;
+.showcase li small {
+  margin-left: 2px;
+}
+
+.row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -67,113 +133,21 @@ li {
           justify-content: center;
 }
 
-.booking__showcase li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.booking__showcase li div {
-  margin: 1rem auto;
-}
-
-.booking--screen {
-  height: 100px;
-  width: 300px;
-  background-color: #2aa3e99d;
-  margin-bottom: 2rem;
-}
-
-.booking__row {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  margin-top: 1rem;
-}
-
-.booking__total {
+.screen {
   height: 150px;
-  width: 400px;
-  background-color: rgba(0, 0, 0, 0.513);
-  color: #fff;
-  font-size: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-top: 2rem;
-  padding: .5rem;
+  width: 250px;
+  background-color: #f4f4f4;
+  -webkit-box-shadow: 0px 3px 10px rgba(255, 255, 255, 0.795);
+          box-shadow: 0px 3px 10px rgba(255, 255, 255, 0.795);
+  -webkit-transform: rotateX(-45deg);
+          transform: rotateX(-45deg);
 }
 
-.name {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+.text {
+  margin: 5px 0;
 }
 
-.number {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.price {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.buy {
-  background-color: red;
-  color: #d4d0d0;
-  outline: none;
-  border: none;
-  text-align: center;
-  font-weight: 700;
-  font-size: 1rem;
-  padding: .5rem;
-}
-
-.border {
-  width: 368px;
-  border: 1px solid red;
-}
-
-.seat {
-  height: .8rem;
-  width: 1.2rem;
-  background-color: #999;
-  border-radius: 5px 5px 0 0;
-  margin: 4px;
-}
-
-.occupied {
-  background-color: greenyellow;
-}
-
-.selected {
-  background-color: #1f83e0;
+.text span {
+  color: #6feaf6;
 }
 /*# sourceMappingURL=style.css.map */
