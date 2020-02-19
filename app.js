@@ -1,27 +1,51 @@
-let movies = document.querySelector('#movie').value;
+const container = document.querySelector('.container');
+const seats = document.querySelectorAll('.row .seat:not(.occupied)');
 
-let name = document.querySelector('#name');
+const count = document.getElementById('count');
+const total = document.getElementById('total');
 
-let number = document.querySelector('#number');
+const movieSelect = document.getElementById('movie');
 
-let price = document.querySelector('#price');
+let ticetPrice = +movieSelect.value;
 
-let seats = document.querySelectorAll('.seat');
+// save selected movie price
 
-let seat;
+function setMovieData(movieIndex, moviePrice){
+  localStorage.setItem('selectedMovieIndex', movieIndex);
+  localStorage.setItem('selectedMoviePrice', moviePrice);
+}
 
-seats.forEach((seat) =>{
-  seat = seat;   
-  seat.addEventListener('click', selectSpot);
+function getTotalPrice(){  
+  const selectedSeats = document.querySelectorAll('.row .seat.selected');
+  const selectedSeatsCount = selectedSeats.length;
 
+  const seatsIndex = [...selectedSeats].map((seat) =>{
+    return [...seats].indexOf(seat);
+  });
 
-  function selectSpot(e){
-    e.preventDefault();
+  localStorage.setItem('selectedSeats', JSON.stringify(seatsIndex));
 
-    if (!seat === seat.classList.contains('occupied')){
-        seat.classList.toggle('selected');  
-    } 
+  count.innerText = selectedSeatsCount;
+  total.innerText = selectedSeatsCount * ticetPrice;  
+}
+
+// Movie select invent
+movieSelect.addEventListener('change', (e) =>{
+  ticetPrice = +e.target.value;  
+
+  setMovieData(e.target.selectedIndex, e.target.value);
+  
+  getTotalPrice();
+})
+
+// Seat click invent
+container.addEventListener('click', (e) =>{
+
+  if (e.target.classList.contains('seat') && !e.target.classList.contains('occupied')){
+
+   e.target.classList.toggle('selected');
     
-    
+   getTotalPrice();
 
- }})
+  }
+});
