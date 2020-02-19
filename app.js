@@ -1,27 +1,17 @@
-let movies = document.querySelector('#movie').value;
+const container = document.querySelector('.container');
+const seats = document.querySelectorAll('.row .seat:not(.occupied)');
 
-let name = document.querySelector('#name');
+const count = document.getElementById('count');
+const total = document.getElementById('total');
 
-let number = document.querySelector('#number');
+const movieSelect = document.getElementById('movie');
 
-let price = document.querySelector('#price');
+const ticetPrice = +movieSelect.value;
 
-let seats = document.querySelectorAll('.seat');
-
-let seat;
-
-seats.forEach((seat) =>{
-  seat = seat;   
-  seat.addEventListener('click', selectSpot);
-
-
-  function selectSpot(e){
-    e.preventDefault();
-
-    if (!seat === seat.classList.contains('occupied')){
-        seat.classList.toggle('selected');  
-    } 
+container.addEventListener('click', (e) =>{
+  if (e.target.classList.contains('seat') && !e.target.classList.contains('occupied')){
+   e.target.classList.toggle('selected');
     
-    
-
- }})
+  }
+  
+})
